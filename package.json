@@ -1,0 +1,24 @@
+{
+  "name": "bitbay_backend",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "git submodule init && git submodule update && cd bit-calc-react && npm i && npm run build && cd ..",
+    "dev": "nodemon index.js",
+    "start:prod": "pm2 start index.js --name bitbay_backend",
+    "restart:prod": "pm2 restart bitbay_backend",
+    "stop:prod": "pm2 delete bitbay_backend"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.3",
+    "pm2": "^2.10.2"
+  }
+}

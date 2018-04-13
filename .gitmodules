@@ -1,0 +1,3 @@
+[submodule "bit-calc-react"]
+	path = bit-calc-react
+	url = https://github.com/Ultrasstas/bit-calc-backend
