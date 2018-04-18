@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "git submodule init && git submodule update && cd bit-calc-react && npm i && npm run build && cd ..",
+    "postinstall": "cd frontend && npm i && npm run build && cd ..",
     "dev": "nodemon index.js",
     "start:prod": "pm2 start index.js --name bitbay_backend",
     "restart:prod": "pm2 restart bitbay_backend",
@@ -12,6 +12,9 @@
   },
   "author": "",
   "license": "ISC",
+  "config": {
+    "unsafe-perm": true
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.2",

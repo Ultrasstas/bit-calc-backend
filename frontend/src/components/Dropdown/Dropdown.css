@@ -1,0 +1,43 @@
+.dropdown {
+    position: absolute;
+    top: -12px;
+    right: 0;
+}
+.dropdown-icon-close {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    z-index: 6;
+    cursor: pointer;
+}
+.dropdown-icon-close:hover + .currency-name {
+    background-color: lightskyblue;
+}
+.dropdown-trigger {
+    position: relative;
+    padding-right: 2.5rem;
+}
+.currency-name {
+    font-size: .8rem;
+    text-transform: uppercase;
+    position: relative;
+    width: 5rem;
+    padding: 14px 12px;
+    background-color: white;
+    border: none;
+    border-bottom: 1px solid rgba(66,66,66,0.2);
+    transition: all 0.3s;
+    z-index: 5;
+    cursor: pointer;
+}
+.currency-name:hover {
+    background-color: lightskyblue;
+}
+.currency-name.active {
+    background-color: deepskyblue;
+}
+.star-inner {
+    position: absolute;
+    top: 1px;
+    right: 6px;
+}

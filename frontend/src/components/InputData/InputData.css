@@ -1,0 +1,136 @@
+.input-flex-row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+.form-flex-row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+.input-flex-row.input {
+    height: 2.7rem;
+}
+
+.css-input {
+    position: relative;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    border: solid 1px #cccccc;
+    padding: .75rem;
+    font-size: .75rem;
+    margin-right: 0.5rem;
+}
+
+.css-input:focus {
+    border: solid 1px skyblue;
+    outline: 1px solid skyblue;
+    box-shadow: 0 0 1px skyblue;
+}
+
+.css-input.error {
+    border: solid 1px #F44336;
+    outline: none;
+    box-shadow: 0 0 1px #F44336;
+}
+
+.css-input-title {
+    margin-bottom: .5rem;
+}
+.bay-amount {
+    width: 180px;
+    padding-right: 3.2rem;
+}
+.bay-amount-abs {
+    position: absolute;
+    /*top: 0;*/
+    font-weight: 500;
+    left: 8rem;
+}
+.time-period {
+    width: 120px;
+    padding-right: 3.5rem;
+}
+.time-period-abs {
+    position: absolute;
+    /*top: 0;*/
+    font-weight: 500;
+    left: 15.2rem;
+}
+.css-input:focus { outline:none; }
+
+.css-submit {
+    position: relative;
+    width: 8.5rem;
+    height: 100%;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    color: #000000;
+    font-size: .75rem;
+    background: #FFD54F;
+    border: solid 1px #FFCA28;
+    outline: none;
+    text-decoration: none;
+    transition: all .3s;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.css-submit-loader {
+    position: relative;
+    width: 8.5rem;
+    height: 100%;
+    background: #FFD54F;
+    border: solid 1px #FFCA28;
+    outline: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.css-submit:hover {
+    background: #FFE082;
+    text-decoration: none;
+    border: solid 1px #FFD54F;
+}
+.input-error {
+    color: #F44336;
+    font-size: 0.76rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 1.2rem;
+}
+
+@media screen and (max-width: 569px) {
+    .form-flex-row {
+        flex-flow: column nowrap;
+    }
+    .input-flex-row {
+        justify-content: space-between;
+        width: 100%;
+    }
+    .input-flex-row:last-of-type {
+        margin-top: .5rem;
+    }
+    .css-submit {
+        width: 100%;
+    }
+    .css-submit-loader {
+        width: 100%;
+    }
+    .css-input.time-period  {
+        margin-right: 0;
+    }
+
+}

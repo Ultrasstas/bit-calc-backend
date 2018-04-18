@@ -18,14 +18,14 @@ axios.interceptors.request.use((config) => {
 
 
 // Calculate chance to get block today
-const calculateChance = (coin, stakes, day_reward = 1350) => {
+const calculateChance = (coin, stakes, day_reward = 1350 * 8) => {
     return coin / stakes * day_reward;
 }
 
 const app = express();
 app.use(bodyParser.json());
 
-const appDir = path.resolve(`${__dirname}/bit-calc-react/build`)
+const appDir = path.resolve(`${__dirname}/frontend/build`)
 
 app.use(
     express.static(appDir)

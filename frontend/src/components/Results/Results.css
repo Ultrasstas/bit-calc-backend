@@ -1,0 +1,72 @@
+.half-container {
+    width: 50%;
+}
+.results-flex-row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+.result-flex-column {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    position: relative;
+}
+.result-flex-column:not(:first-child) {
+    margin-left: 1.2rem;
+}
+
+.css-input-title {
+    margin-bottom: .5rem;
+}
+.bottom-text {
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    font-size: .9rem;
+}
+.css-result {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 600;
+    font-size: 2rem;
+    height: 2.7rem;
+}
+.dropdown-icon {
+    position: absolute;
+    top: -2px;
+    right: 14px;
+    cursor: pointer;
+}
+.star-outer {
+    position: absolute;
+    top: -11px;
+    right: 6px;
+}
+@media screen and (max-width: 1024px) {
+    .half-container {
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+    .results-flex-row {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 569px) {
+    .results-flex-row {
+        flex-flow: row wrap;
+        max-width: 350px;
+        justify-content: space-between;
+    }
+    .result-flex-column:nth-child(2) {
+        order: 3;
+        margin-top: 1.5rem;
+        margin-left: 0;
+        flex: 1 0 100%;
+    }
+}

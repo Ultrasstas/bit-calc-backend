@@ -1,0 +1,55 @@
+.App {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.App-container {
+  width: 90vw;
+  max-width: 60rem;
+}
+
+.App-input-data-wrapper {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  z-index: 2;
+}
+
+.App-input-container {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+@media screen and (max-width: 1024px) {
+  .App-input-container {
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+}
+
+.App-color-bars-container {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.App-chart-wrapper {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 250px;
+}
+.App-coins-data-wrapper {
+  margin-top: 2rem;
+}
