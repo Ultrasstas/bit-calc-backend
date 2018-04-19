@@ -11,7 +11,10 @@ import {
     SET_CURRENCY,
     GET_CURRENCIES_FAIL,
     GET_CURRENCIES_REQUEST,
-    GET_CURRENCIES_SUCCESS
+    GET_CURRENCIES_SUCCESS,
+    GET_CONVERTED_REQUEST,
+    GET_CONVERTED_SUCCESS,
+    GET_CONVERTED_FAIL
 } from '../constants';
 
 export const getCalculatedData = calcData => async (dispatch) => {
@@ -30,6 +33,27 @@ export const getCalculatedData = calcData => async (dispatch) => {
                 dispatch(apiFail(GET_DATA_FAIL));
             } else {
                 dispatch(apiSuccess(GET_DATA_SUCCESS, res.body));
+            }
+        });
+
+};
+
+export const getTotalInCurrency = calcData => async (dispatch) => {
+    dispatch(apiRequest(GET_CONVERTED_REQUEST));
+
+    console.log('calcData', calcData);
+
+    request.post(`${BASE_URL}/convert`)
+        .set('Content-Type', 'application/json')
+        .set('Accept', 'application/json')
+        .send(calcData)
+        .end((err, res) => {
+            console.log('err', err);
+            console.log('res', res);
+            if (err || !res.body ) {
+                dispatch(apiFail(GET_CONVERTED_FAIL));
+            } else {
+                dispatch(apiSuccess(GET_CONVERTED_SUCCESS, res.body.inCurrency));
             }
         });
 

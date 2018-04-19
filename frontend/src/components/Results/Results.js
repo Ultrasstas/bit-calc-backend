@@ -77,7 +77,7 @@ const mapDispatchToProps = dispatch => ({
     },
     getCurrencies: () => {
         dispatch(getCurrencies());
-    },
+    }
 });
 
 const mapStateToProps = state => ({

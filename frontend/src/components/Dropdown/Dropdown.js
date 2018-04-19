@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {RedStar} from '../RedStar/RedStar';
-import { closeDropdown, setCurrency } from '../../store/actions/calcData';
+import { closeDropdown, setCurrency, getTotalInCurrency } from '../../store/actions/calcData';
 import './Dropdown.css';
 import AngleDown from '../../icons/angle-down.svg';
 
@@ -15,8 +15,8 @@ class Dropdown extends React.Component {
     }
 
     handleClose(id) {
-        // this.props.closeDropdown();
         console.log(id);
+        this.props.getTotalInCurrency({currency: id, amount: this.props.total});
         this.props.setCurrency(id)
     }
 
@@ -44,12 +44,16 @@ const mapDispatchToProps = dispatch => ({
     setCurrency: (id) => {
         dispatch(setCurrency(id));
     },
+    getTotalInCurrency: (dataObj) => {
+        dispatch(getTotalInCurrency(dataObj))
+    }
 });
 
 const mapStateToProps = state => ({
     isDropdownOpen: state.calcData.isDropdownOpen,
     currencies: state.calcData.currencies,
     activeCurrency: state.calcData.activeCurrency,
+    total: state.calcData.total
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dropdown);

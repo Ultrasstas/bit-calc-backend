@@ -7,7 +7,10 @@ import {
     SET_CURRENCY,
     GET_CURRENCIES_FAIL,
     GET_CURRENCIES_REQUEST,
-    GET_CURRENCIES_SUCCESS
+    GET_CURRENCIES_SUCCESS,
+    GET_CONVERTED_REQUEST,
+    GET_CONVERTED_SUCCESS,
+    GET_CONVERTED_FAIL
 } from '../constants';
 import * as moment from 'moment';
 
@@ -26,6 +29,7 @@ const initialState = {
 export default function (state = initialState, action) {
     switch (action.type) {
         case GET_DATA_REQUEST:
+        case GET_CONVERTED_REQUEST:
             return {
                 ...state,
                 isRequesting: true,
@@ -44,6 +48,17 @@ export default function (state = initialState, action) {
                 total: action.payload.total
             };
         case GET_DATA_FAIL:
+            return {
+                ...state,
+                isRequesting: false,
+            };
+        case GET_CONVERTED_SUCCESS:
+            return {
+                ...state,
+                isRequesting: false,
+                inCurrency: action.payload,
+            };
+        case GET_CONVERTED_FAIL:
             return {
                 ...state,
                 isRequesting: false,
