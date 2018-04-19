@@ -103,4 +103,15 @@ app.post('/api/calculate', async (req, res) => {
     });
 });
 
+app.post('/api/convert', async (req, res) => {   
+    const rate = await axios.post('https://currencio.co/rate.php', 
+        {from: 'BAY', to: req.body.currency}, 
+        {headers: {'Content-Type': 'application/x-www-form-urlencoded'} }
+    );
+
+    res.send({
+        inCurrency: parseFloat(req.body.amount) * rate.data,
+    })
+});
+
 app.listen(8080);
