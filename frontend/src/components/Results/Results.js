@@ -53,7 +53,7 @@ class Results extends React.Component {
                     <div className="css-input-title dropdown-trigger">
                         <span>Total BAY in {this.state.currencyName}</span>
                         <img onClick={this.openDropdown} className="dropdown-icon" width={24} height={24} color="#424242" src={`${AngleUp}`} alt=""/>
-                        <div className="star-outer"><RedStar/></div>
+                        {/*<div className="star-outer"><RedStar/></div>*/}
                     </div>
 
                   <div>

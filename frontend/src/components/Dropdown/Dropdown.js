@@ -27,7 +27,7 @@ class Dropdown extends React.Component {
                 {
                     this.props.currencies.map(currency => (
                         <div onClick={() => this.handleClose(currency.id)}  key={currency.id} className={`currency-name ${currency.id === this.props.activeCurrency ? 'active' : ''}`}>{currency.name}
-                            { currency.isCompulsory ? <div className="star-inner"><RedStar/></div> : null }
+                            {/*{ currency.isCompulsory ? <div className="star-inner"><RedStar/></div> : null }*/}
                         </div>)
                     )
                 }
