@@ -38,7 +38,7 @@ export default function (state = initialState, action) {
             const newGraph = action.payload.graph.map(item => {
                 item.date = moment(item.date).format('MMM YYYY');
                 return item;
-            })
+            });
             return {
                 ...state,
                 isRequesting: false,

@@ -20,6 +20,15 @@ class InputData extends React.Component {
         }
     }
 
+    componentDidMount() {
+        const data = {
+            coins: this.state.BAYValue,
+            currency: this.props.activeCurrency,
+            period: parseInt(this.state.yearsValue, 10)*12
+        };
+        this.props.getCalculatedData(data);
+    }
+
     onInput(event) {
         this.setState({[event.currentTarget.name]: event.currentTarget.value});
 
@@ -46,7 +55,7 @@ class InputData extends React.Component {
         const data = {
             coins: this.state.BAYValue,
             currency: this.props.activeCurrency,
-            period: parseInt(this.state.yearsValue)*12
+            period: parseInt(this.state.yearsValue, 10)*12
         };
         this.props.getCalculatedData(data);
         this.setState({errorText: ''});

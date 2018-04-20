@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Dropdown from '../Dropdown/Dropdown';
-import {RedStar} from '../RedStar/RedStar';
+// import {RedStar} from '../RedStar/RedStar';
 import { openDropdown, getCurrencies } from '../../store/actions/calcData';
 import './Results.css';
 import AngleUp from '../../icons/angle-up.svg';

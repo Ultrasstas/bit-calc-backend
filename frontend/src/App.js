@@ -13,13 +13,6 @@ const colorBars = [
     //{colorR: '100', colorG: '255', colorB: '218', title: 'Staking reward'},
 ];
 
-const Toolbox = styled.div`
-          width: 100vw;
-          height: 3rem;
-          text-align: center;
-          background-color: white;
-        `;
-
 const DivFlexRow = styled.div`
           display: flex;
           flex-flow: row nowrap;
@@ -33,7 +26,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Toolbox/>
         <div className="App-container">
           <div className="App-input-data-wrapper">
               <PageTitle/>

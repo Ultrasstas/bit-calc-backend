@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {RedStar} from '../RedStar/RedStar';
+// import {RedStar} from '../RedStar/RedStar';
 import { closeDropdown, setCurrency, getTotalInCurrency } from '../../store/actions/calcData';
 import './Dropdown.css';
 import AngleDown from '../../icons/angle-down.svg';

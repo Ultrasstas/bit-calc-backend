@@ -22,6 +22,10 @@
     margin-top: 1rem;
     min-width: 20rem;
 }
+.coins-data-item-text {
+    font-size: 0.9rem;
+    margin-top: 0.1rem;
+}
 
 @media screen and (max-width: 786px) {
     .coins-data-item {
