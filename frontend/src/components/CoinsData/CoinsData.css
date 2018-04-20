@@ -5,7 +5,7 @@
     position: relative;
 }
 .coins-data-title span {
-    font-size: .9rem;
+    font-size: 1.1rem;
     font-weight: 700;
 }
 .coins-data-body {
@@ -27,6 +27,7 @@
 }
 .coins-data-item-title {
     font-weight: 700;
+    font-size: 1.1rem;
 }
 .coins-data-item-text {
     margin-top: 0.5rem;

@@ -12,7 +12,7 @@ const SubTitle = styled.p`
 `;
 export const PageTitle = () => (
     <div>
-        <Title>BitBay Staking Calculator</Title>
+        <Title>BitBay staking calculator</Title>
         <SubTitle>With the tool below you can calculate your reward in $BAY coins for operating BITBAY nodes</SubTitle>
     </div>
 )
