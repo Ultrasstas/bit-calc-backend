@@ -2,16 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Title = styled.h1`
-    margin-bottom: 0;
-    color: #616161;
+    color: #311B92;
+    font-size: 2.5rem;
 `;
 const SubTitle = styled.p`
-    margin-top: 0.75rem;
+    margin-top: 1.75rem;
+    font-weight: 700;
+    font-size: .9rem;
 `;
 export const PageTitle = () => (
     <div>
-        <Title>Staking Calculator</Title>
+        <Title>BitBay Staking Calculator</Title>
         <SubTitle>With the tool below you can calculate your reward in $BAY coins for operating BITBAY nodes</SubTitle>
     </div>
-
 )

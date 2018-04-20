@@ -5,14 +5,17 @@
     position: relative;
 }
 .coins-data-title span {
-    font-size: 1rem;
+    font-size: .9rem;
+    font-weight: 700;
 }
 .coins-data-body {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: .5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+
 }
 .coins-data-item {
     display: flex;
@@ -22,9 +25,11 @@
     margin-top: 1rem;
     min-width: 20rem;
 }
+.coins-data-item-title {
+    font-weight: 700;
+}
 .coins-data-item-text {
-    font-size: 0.9rem;
-    margin-top: 0.1rem;
+    margin-top: 0.5rem;
 }
 
 @media screen and (max-width: 786px) {
