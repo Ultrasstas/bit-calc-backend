@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Title = styled.h1`
-    color: #311B92;
+    color: #6357AC;
     font-size: 2.5rem;
 `;
 const SubTitle = styled.p`
