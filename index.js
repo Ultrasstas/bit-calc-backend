@@ -73,7 +73,7 @@ app.post('/api/calculate', async (req, res) => {
         {headers: {'Content-Type': 'application/x-www-form-urlencoded'} }
     );
 
-    let percent = 1 / (stakes_amount / block_id);//calculateChance(total_coins, stakes_amount);
+    let percent = 1 / (stakes_amount / block_id) / 12;//calculateChance(total_coins, stakes_amount);
     const graph = [];
 
     let date = new Date(); let prevDate;
