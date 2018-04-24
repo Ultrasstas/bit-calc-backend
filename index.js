@@ -73,7 +73,7 @@ app.post('/api/calculate', async (req, res) => {
         {headers: {'Content-Type': 'application/x-www-form-urlencoded'} }
     );
 
-    let percent = calculateChance(total_coins, stakes_amount);
+    let percent = 1 / (stakes_amount / block_id);//calculateChance(total_coins, stakes_amount);
     const graph = [];
 
     let date = new Date(); let prevDate;
@@ -83,10 +83,10 @@ app.post('/api/calculate', async (req, res) => {
     for (let i = 0; i < parseInt(req.body.period); i++) {
         prevDate = new Date(date);
         date.setMonth(date.getMonth() + 1);
-        let diff = parseInt((date - prevDate) / (1000 * 60 * 60 * 24));   
+        let diff = parseInt((date - prevDate) / (1000 * 60 * 60 * 24));
 
         total_coins = total_coins + diff * percent;
-        percent = calculateChance(total_coins, stakes_amount);
+        // percent = calculateChance(total_coins, stakes_amount);
 
         graph.push({
             date: new Date(date),
