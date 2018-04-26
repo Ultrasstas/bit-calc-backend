@@ -28,6 +28,10 @@
 .coins-data-item-title {
     font-weight: 700;
     font-size: 1.1rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
 }
 .coins-data-item-text {
     margin-top: 0.5rem;

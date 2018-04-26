@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Dropdown from '../Dropdown/Dropdown';
+import CustomTooltip from '../CustomTooltip/CustomTooltip';
 // import {RedStar} from '../RedStar/RedStar';
 import { openDropdown, getCurrencies } from '../../store/actions/calcData';
 import './Results.css';
@@ -39,7 +40,7 @@ class Results extends React.Component {
             <div className="results-flex-row half-container">
 
                 <div className="result-flex-column">
-                    <div className="css-input-title">Total Reward(1%/y)</div>
+                    <div className="css-input-title"><div>Total Reward(2%/y)</div><CustomTooltip tooltipId="reward" tooltipText="Amount of BitBay blockchain addresses actively staking their coins"/></div>
                     <div className="css-result">{this.props.reward}</div>
                 </div>
 
