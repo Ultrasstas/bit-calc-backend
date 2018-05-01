@@ -26,8 +26,8 @@
     min-width: 20rem;
 }
 .coins-data-item-title {
-    font-weight: 700;
-    font-size: 1.1rem;
+    /*font-weight: 700;*/
+    font-size: 1rem;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -35,6 +35,8 @@
 }
 .coins-data-item-text {
     margin-top: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 @media screen and (max-width: 786px) {
