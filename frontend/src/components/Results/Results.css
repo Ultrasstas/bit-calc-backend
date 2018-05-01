@@ -64,7 +64,7 @@
 @media screen and (max-width: 569px) {
     .results-flex-row {
         flex-flow: row wrap;
-        max-width: 350px;
+        /*max-width: 350px;*/
         justify-content: space-between;
     }
     .result-flex-column:nth-child(2) {

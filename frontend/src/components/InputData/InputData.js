@@ -63,7 +63,7 @@ class InputData extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="input-holder">
                 <div className="css-input-title">I own ... BAY and plan to hold for ... </div>
                 <form onSubmit={this.sendData} className="form-flex-row">
                     <div className="input-flex-row input">
